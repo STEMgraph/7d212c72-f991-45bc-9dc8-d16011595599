@@ -1,0 +1,85 @@
+\begin{challenge}
+    \chatitle{FIFO Data Structures with \texttt{std::queue} in C++}
+    \begin{chadescription}
+    In C++, the \texttt{std::queue} class implements a First-In-First-Out (FIFO) data structure, where elements are added to the back and removed from the front. 
+    This structure is ideal for scenarios where the order of operations or data processing must be preserved, such as task scheduling or buffering.
+
+    Unlike arrays or other containers, \texttt{std::queue} provides restricted access to its elements, allowing interaction only with the front and back. 
+    This restriction enforces the FIFO principle and simplifies usage by focusing on the operations of insertion (\texttt{push()}) and removal (\texttt{pop()}). 
+    Additionally, \texttt{std::queue} is a container adapter, meaning it uses other containers like \texttt{std::deque} or \texttt{std::list} as its underlying storage.
+
+    In this challenge, you will explore how to use \texttt{std::queue} to model real-world FIFO behavior and understand its advantages over manually implementing queues in C. 
+    By the end, you will have a clear understanding of when and why to use \texttt{std::queue} in C++ programs.
+    \end{chadescription}
+
+    \begin{task}
+        Write a simple program using \texttt{std::queue} that performs the following steps:
+        \begin{enumerate}
+            \item Declare an \texttt{std::queue} to store integers.
+            \item Add the numbers \texttt{10}, \texttt{20}, and \texttt{30} to the queue using \texttt{push()}.
+            \item Print the front element of the queue using \texttt{front()}.
+            \item Remove the front element using \texttt{pop()}.
+            \item Print the new front element and check if the queue is empty using \texttt{empty()}.
+        \end{enumerate}
+
+        Save your program and run it to ensure the output matches your expectations.
+
+        \begin{questions}
+            \item How does the restricted access provided by \texttt{std::queue} simplify its usage compared to manually implementing a queue in C?
+            \item What happens if you call \texttt{pop()} on an empty queue? How can you prevent such errors?
+            \item Why is it important for the \texttt{empty()} method to check the queue’s state before performing operations?
+        \end{questions}
+    \end{task}
+
+    \begin{task}
+        Write a program using \texttt{std::queue} that simulates a customer service system:
+        \begin{enumerate}
+            \item Declare an \texttt{std::queue} to store customer names as strings.
+            \item Add five customer names to the queue using \texttt{push()}.
+            \item Implement a loop that serves each customer by:
+                \begin{itemize}
+                    \item Printing the name of the customer being served using \texttt{front()}.
+                    \item Removing the customer from the queue using \texttt{pop()}.
+                \end{itemize}
+            \item Print a message when all customers have been served, using \texttt{empty()} to check the queue.
+        \end{enumerate}
+
+        Save your program, compile it, and ensure it runs correctly.
+
+        \begin{questions}
+            \item How does the loop in this task demonstrate the FIFO behavior of \texttt{std::queue}?
+            \item Why is the queue’s restricted access (only to the front and back) advantageous in this scenario?
+            \item What are some real-world situations where a FIFO structure like \texttt{std::queue} would be useful?
+        \end{questions}
+    \end{task}
+
+    \begin{task}
+        Write a program using \texttt{std::queue} that processes a sequence of numbers as follows:
+        \begin{enumerate}
+            \item Declare an \texttt{std::queue} to store integers.
+            \item Read a sequence of 10 integers from the user and add them to the queue using \texttt{push()}.
+            \item Implement a function named \texttt{processQueue} that:
+                \begin{itemize}
+                    \item Doubles each number in the queue.
+                    \item Removes the processed number from the queue using \texttt{pop()}.
+                \end{itemize}
+            \item Print the doubled numbers as they are processed.
+        \end{enumerate}
+
+        Save your program, compile it, and ensure it runs correctly. This task requires you to think carefully about how to interact with the queue dynamically.
+
+        \begin{questions}
+            \item How does the \texttt{processQueue} function demonstrate dynamic interaction with an \texttt{std::queue}?
+            \item Why is \texttt{std::queue} a good choice for processing sequential input data?
+            \item How could you extend this program to process more complex operations on the queue’s elements?
+        \end{questions}
+    \end{task}
+
+    \begin{advise}
+        Working with \texttt{std::queue} helps you understand the simplicity and power of FIFO data structures in C++. 
+        Unlike manually implemented queues in C, \texttt{std::queue} provides built-in methods that make managing sequential data easy and efficient. 
+        Through this challenge, you have explored how to add, remove, and process elements while preserving their order. 
+        Always remember to choose \texttt{std::queue} when you need a straightforward way to manage sequential operations where the order of processing matters. 
+        With practice, you'll find \texttt{std::queue} to be an excellent tool for solving many common programming problems.
+    \end{advise}
+\end{challenge}
