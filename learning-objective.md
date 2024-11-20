@@ -1,1 +1,0 @@
-At the end of this challenge, the scholar will be able to explain the concept of \texttt{std::queue} as a FIFO data structure in C++, including its advantages over manually implemented queues in C and its use cases for sequential data processing.
